@@ -29,7 +29,7 @@
     'custom-primary-btn',
     variant && `custom-btn-${variant}`,
     size && `custom-btn-${size}`
-  ]" v-bind="$attrs" v-on="$listeners">
+  ]" v-bind="$attrs">
     <slot></slot>
   </v-btn>
 </template>
@@ -42,12 +42,12 @@ export default {
     variant: {
       type: String,
       default: 'primary',
-      validator: value => ['primary', 'secondary', 'success', 'error', 'warning'].includes(value)
+      validator: value => ['primary', 'secondary', 'success', 'error', 'warning'].includes(value!.toString())
     },
     size: {
       type: String,
       default: 'medium',
-      validator: value => ['small', 'medium', 'large'].includes(value)
+      validator: value => ['small', 'medium', 'large'].includes(value!.toString())
     }
   }
 }

@@ -14,7 +14,7 @@ import Button from "../components/common/Button.vue";
                 </Button>
             </div>
         </div>
-        <v-carousel continuous :show-arrows="false" hide-delimiter-background interval=2000 height="150">
+        <v-carousel class="my-5" continuous :show-arrows="false" hide-delimiter-background interval=2000 height="180">
             <v-carousel-item>
                 <div class="flex justify-center w-full">
                     <img src="../assets/big_sale_banner.png" />

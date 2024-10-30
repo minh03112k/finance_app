@@ -32,7 +32,7 @@ const routes: RouteRecordRaw[] = [
   {
     path: "/:pathMatch(.*)*",
     name: "NotFound",
-    component: () => import("@/views/NotFound.vue"),
+    component: () => import("../views/NotFound.vue"),
     meta: {
       requiresAuth: false,
       title: "404 Not Found",
