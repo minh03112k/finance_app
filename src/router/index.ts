@@ -13,22 +13,31 @@ declare module "vue-router" {
 const routes: RouteRecordRaw[] = [
   {
     path: "/",
-    name: "Home",
-    component: () => import("../views/Home.vue"),
+    name: "Welcome",
+    component: () => import("../views/Welcome.vue"),
     meta: {
       requiresAuth: false,
-      title: "Home",
+      title: "Welcome",
     },
   },
-  //   {
-  //     path: '/:pathMatch(.*)*',
-  //     name: 'NotFound',
-  //     component: () => import('@/views/NotFound.vue'),
-  //     meta: {
-  //       requiresAuth: false,
-  //       title: '404 Not Found'
-  //     }
-  //   }
+  {
+    path: "/shop",
+    name: "Shop",
+    component: () => import("../views/Shop.vue"),
+    meta: {
+      requiresAuth: false,
+      title: "Shop",
+    },
+  },
+  {
+    path: "/:pathMatch(.*)*",
+    name: "NotFound",
+    component: () => import("@/views/NotFound.vue"),
+    meta: {
+      requiresAuth: false,
+      title: "404 Not Found",
+    },
+  },
 ];
 
 const router = createRouter({
