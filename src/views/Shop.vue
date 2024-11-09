@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { Icons } from "../icons";
 import Button from "../components/common/Button.vue";
+import Categories from "../components/Shop/Categories.vue";
 </script>
 
 <template>
@@ -36,6 +37,6 @@ import Button from "../components/common/Button.vue";
 
             </v-carousel-item>
         </v-carousel>
-        hiiii
+        <Categories />
     </div>
 </template>
